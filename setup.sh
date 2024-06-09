@@ -61,15 +61,8 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# start server
-tmux start-server
-if [ $? -ne 0 ]; then
-    echo "[INFO]: tmux server start failed"
-    exit 1
-fi
-
 # source config
-tmux source ~/.config/tmux/tmux.conf
+tmux -c "tmux source ~/.config/tmux/tmux.conf"
 if [ $? -ne 0 ]; then
     echo "[INFO]: tmux config source failed"
     exit 1
