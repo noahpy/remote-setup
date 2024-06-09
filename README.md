@@ -1,11 +1,13 @@
 
 # Remote Setup Guide
 This is a setup guide for working on remote machines.
-It is a relatively minimal setup with tmux, neovim and bash made compatible to each other.
+It is a relatively minimal setup with tmux, neovim, where one can navigate
+between panes with Ctrl+[H,J,K,L].
 Installation commands may vary depending on the distribution.
+The respective config file can be found in the configs folder.
 
 ## Neovim
-Install neovim:
+Install [neovim](https://github.com/neovim/neovim)
 ```
 sudo apt install neovim
 ```
@@ -16,7 +18,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 ```
 Copy the neovim config:
 ```
-cp <PATH_TO_NEOVIM_CONF> ~/.config/nvim/init.vim
+cp <PATH_TO_REPO>/configs/neovim/init.vim ~/.config/nvim/init.vim
 ```
 
 ## Tmux
@@ -28,18 +30,19 @@ Install [tmux plugin manager](https://github.com/tmux-plugins/tpm)
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
-Intialize tmux-conf and source it:
+Copy the tmux config file from this repo, then source it:
 ```
-tmux source <PATH_TO_TMUX_CONF>
+cp <PATH_TO_REPO>/configs/tmux.conf ~/.config/tmux/tmux.conf
+tmux source ~/.config/tmux/tmux.conf
 ```
 Aliasing (also done in bashrc):
 ```
-alias tmux="tmux -f <PATH_TO_TMUX_CONF>"
+alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 ```
 
 ## Bashrc
-Extend the default bashrc:
+Extend the default bashrc :
 ```
-cat <PATH_TO_BASHRC> >> ~/.bashrc
+cat <PATH_TO_REPO>/configs/bashrc-extend.sh >> ~/.bashrc
 ```
 
