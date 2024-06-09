@@ -1,8 +1,8 @@
 
-# Remote Setup Guide
-This is a setup guide for working on remote machines.
-It is a relatively minimal setup with tmux, neovim, where one can navigate
-between panes with Ctrl+[H,J,K,L].
+# Tmux Remote Setup
+This repo provied a setup script / guide for installing and configuring tmux with nvim.
+It is a relatively minimal setup, that the user can extend on.
+This setup installs plugins such that one can navigate between panes with Ctrl+[H,J,K,L].
 Installation commands may vary depending on the distribution.
 The respective config file can be found in the configs folder.
 
