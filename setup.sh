@@ -18,7 +18,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Copy the neovim config
-mkdir -p ~/.config/nvim && cp ./configs/nvim/init.vim ~/.config/nvim/init.vim
+mkdir -p ~/.config/nvim && cp ./configs/neovim/init.vim ~/.config/nvim/init.vim
 if [ $? -ne 0 ]; then
     echo "neovim config copy failed"
     exit 1
