@@ -20,6 +20,11 @@ Copy the neovim config:
 ```
 cp <PATH_TO_REPO>/configs/neovim/init.vim ~/.config/nvim/init.vim
 ```
+Install plugins:
+```
+nvim -c PlugInstall
+```
+
 
 ## Tmux
 Install [tmux](https://github.com/tmux/tmux)
@@ -30,9 +35,12 @@ Install [tmux plugin manager](https://github.com/tmux-plugins/tpm)
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
-Copy the tmux config file from this repo, then source it:
+Copy the tmux config file from this repo:
 ```
 cp <PATH_TO_REPO>/configs/tmux.conf ~/.config/tmux/tmux.conf
+```
+Then source it:
+```
 tmux source ~/.config/tmux/tmux.conf
 ```
 Aliasing (also done in bashrc):
