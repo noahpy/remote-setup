@@ -9,11 +9,11 @@ The respective config file can be found in the configs folder.
 ## Quick Start
 You can simply enter the cloned repo and run:
 ```
-./setup.sh
+./setup.sh && source ~/.bashrc
 ```
 If you want to see the commands, run with:
 ```
-bash -x setup.sh
+bash -x setup.sh && source ~/.bashrc
 ```
 If you want to run the commands manually, follow the setup guide below.
 
