@@ -6,7 +6,15 @@ between panes with Ctrl+[H,J,K,L].
 Installation commands may vary depending on the distribution.
 The respective config file can be found in the configs folder.
 
-## Neovim
+## Quick Start
+You can simply enter the cloned repo and run:
+```
+./setup.sh
+```
+If you want to run the commands manually, follow the setup guide below.
+
+## Setup Guide
+### Neovim
 Install [neovim](https://github.com/neovim/neovim)
 ```
 sudo apt install neovim
@@ -25,8 +33,7 @@ Install plugins:
 nvim -c PlugInstall
 ```
 
-
-## Tmux
+### Tmux
 Install [tmux](https://github.com/tmux/tmux)
 ```
 sudo apt install tmux
@@ -48,7 +55,7 @@ Aliasing (also done in bashrc):
 alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 ```
 
-## Bashrc
+### Bashrc
 Extend the default bashrc :
 ```
 cat <PATH_TO_REPO>/configs/bashrc-extend.sh >> ~/.bashrc
