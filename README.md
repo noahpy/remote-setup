@@ -11,6 +11,10 @@ You can simply enter the cloned repo and run:
 ```
 ./setup.sh
 ```
+If you want to see the commands, run with:
+```
+bash -x setup.sh
+```
 If you want to run the commands manually, follow the setup guide below.
 
 ## Setup Guide
