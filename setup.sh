@@ -68,6 +68,13 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# Install plugins
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
+if [ $? -ne 0 ]; then
+    echo "[INFO]: tmux plugin install failed"
+    exit 1
+fi
+
 echo "[INFO]: Tmux setup complete"
 echo "[INFO]: ====================="
 echo "[INFO]: Bashrc"

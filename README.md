@@ -54,6 +54,11 @@ Then source it:
 ```
 tmux source ~/.config/tmux/tmux.conf
 ```
+To install the plugins run:
+```
+tmux
+```
+And then execute <prefix>+I (prefix default is Ctrl-b).
 Aliasing (also done in bashrc):
 ```
 alias tmux="tmux -f ~/.config/tmux/tmux.conf"
