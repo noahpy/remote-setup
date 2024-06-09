@@ -43,10 +43,15 @@ if [ $? -ne 0 ]; then
 fi
 
 # Install tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-if [ $? -ne 0 ]; then
-    echo "Tmux plugin manager installation failed"
-    exit 1
+# Skip if already installed
+if [ -d ~/.tmux/plugins/tpm ]; then
+    echo "Tmux plugin manager already installed"
+else
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    if [ $? -ne 0 ]; then
+        echo "Tmux plugin manager installation failed"
+        exit 1
+    fi
 fi
 
 # Copy the tmux config
