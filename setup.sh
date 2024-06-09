@@ -68,9 +68,16 @@ echo "====================="
 echo "Bashrc"
 
 # Extend bashrc
-echo ./configs/bash/bashrc-extend.sh >> ~/.bashrc
+cat ./configs/bash/bashrc-extend.sh >> ~/.bashrc
 if [ $? -ne 0 ]; then
     echo "bashrc extend failed"
+    exit 1
+fi
+
+# source config
+source ~/.bashrc
+if [ $? -ne 0 ]; then
+    echo "bashrc source failed"
     exit 1
 fi
 
