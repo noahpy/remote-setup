@@ -79,13 +79,6 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# source config
-source ~/.bashrc
-if [ $? -ne 0 ]; then
-    echo "[INFO]: bashrc source failed"
-    exit 1
-fi
-
 echo "[INFO]: Bashrc setup complete"
 echo "[INFO]: ====================="
 
